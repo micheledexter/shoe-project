@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const shoeRouter = require('./routers/shoe.router');
 
 app.use(express.static('server/public'));
+app.use(bodyParser.json());
 
 app.use('/shoe', shoeRouter);
 
